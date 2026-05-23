@@ -682,7 +682,16 @@ require("lazy").setup({
 			--  - settings (table): Override the default settings passed when initializing the server.
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
-				-- clangd = {},
+				clangd = {
+					cmd = {
+						"clangd",
+						"--background-index",
+						"--compile-commands-dir=build",
+						"--clang-tidy",
+						"--header-insertion=iwyu",
+						"--completion-style=detailed",
+					},
+				},
 				-- gopls = {},
 				-- pyright = {},
 				-- rust_analyzer = {},
@@ -982,7 +991,7 @@ require("lazy").setup({
 				--  the list of additional_vim_regex_highlighting and disabled languages for indent.
 				additional_vim_regex_highlighting = { "ruby" },
 			},
-			indent = { enable = true, disable = { "ruby" } },
+			indent = { enable = false, disable = { "ruby" } },
 		},
 		-- There are additional nvim-treesitter modules that you can use to interact
 		-- with nvim-treesitter. You should go explore a few and see what interests you:
@@ -1083,6 +1092,7 @@ require("lazy").setup({
 })
 -- NOTE: Custom imported plugins
 require("managers.buffer")
+require("managers.git")
 
 -- Show diagnostic float with gl or <leader>e
 vim.keymap.set("n", "gl", vim.diagnostic.open_float, { desc = "Show line diagnostic" })
