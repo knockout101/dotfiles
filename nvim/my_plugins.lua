@@ -13,6 +13,3 @@ require('tfm').setup {
   replace_netrw = true,
 }
 
-vim.keymap.set('n', '<leader>r', function()
-  require('tfm').open()
-end, { desc = 'Open Yazi' })
