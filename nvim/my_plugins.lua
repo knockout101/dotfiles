@@ -12,4 +12,3 @@ require('tfm').setup {
   file_manager = 'yazi',
   replace_netrw = true,
 }
-
