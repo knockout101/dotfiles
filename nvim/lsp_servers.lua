@@ -1,7 +1,9 @@
 do
     local servers = {
-        clangd = {},
-        rust_analyzer = {},
+        clangd = {
+            filetypes = { 'cpp', 'hpp', 'c', 'h' },
+        },
+        rust_analyzer = { 'rs' },
         neocmake = {},
     }
     -- Configure and enable servers
