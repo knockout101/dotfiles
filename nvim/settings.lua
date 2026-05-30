@@ -6,6 +6,7 @@ vim.opt.expandtab = true    -- Converts tabs to spaces
 
 require('telescope').setup {
     defaults = {
-        layout_strategy = 'vertical'
+        layout_strategy = 'vertical',
+        scroll_strategy = 'limit',
     },
 }
