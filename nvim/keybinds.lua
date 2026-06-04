@@ -12,7 +12,7 @@ vim.keymap.set("n", "<leader>bd", "<Cmd>bp|bd #<CR>", { desc = "Delete buffer (s
 vim.keymap.set("n", "<leader>bD", ":bdelete!<CR>", { desc = "Force delete buffer" })
 vim.keymap.set("n", "<leader>bo", ":%bd|e#|bd#<CR>", { desc = "Close all other buffers" })
 vim.keymap.set("n", "<leader>h", ":bnext<CR>", { desc = "Next buffer" })
-vim.keymap.set("n", "<leader>k", ":bprevious<CR>", { desc = "Previous buffer" })
+vim.keymap.set("n", "<leader>l", ":bprevious<CR>", { desc = "Previous buffer" })
 vim.keymap.set("n", "<leader>bb", "<Cmd>enew<CR>", { desc = "Create empty buffer" })
 
 -- GitSign related keybinds
