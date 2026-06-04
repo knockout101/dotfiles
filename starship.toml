@@ -24,6 +24,9 @@ $time\
 [ ](fg:#33658A)\
 """
 
+# For suppressing the timing warning
+scan_timeout = 120
+
 # Disable the blank line at the start of the prompt
 # add_newline = false
 
